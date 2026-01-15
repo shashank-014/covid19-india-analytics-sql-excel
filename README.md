@@ -1,104 +1,56 @@
 # 🦠 Pandemic Patterns: COVID-19 Analytics for India  
-### SQL + Excel Data Analytics Project
+**SQL | Excel | Data Analysis | Dashboarding**
 
-## 📌 Project Overview
-This project analyzes India’s COVID-19 pandemic using **SQL-based ETL** and **Excel-driven analytics and dashboards**.  
-The objective was to transform large, fragmented public health datasets into **structured insights** covering case trends, testing efficiency, vaccination progress, recovery outcomes, and risk classification across Indian states.
-
-The project combines **backend data processing (SQL)** with **front-end analytics and visualization (Excel dashboards)** to demonstrate end-to-end analytical thinking.
+## 📌 Overview
+End-to-end COVID-19 analytics project analyzing **cases, testing, vaccination, recovery, and risk patterns** across Indian states using **SQL for ETL** and **Excel for analysis & dashboards**.
 
 ---
 
-## 🛠 Tools & Technologies
-- **SQL (PostgreSQL)** – Data cleaning, joins, feature engineering
-- **Microsoft Excel**
-  - PivotTables & PivotCharts
-  - Advanced formulas (INDEX, MATCH, MAXIFS)
-  - Conditional formatting
-  - Time-series forecasting (ETS)
-  - Interactive dashboards with slicers
+## 🛠 Tech Stack
+- **SQL (PostgreSQL)** – ETL, joins, feature engineering  
+- **Microsoft Excel** – PivotTables, formulas, forecasting (ETS), dashboards  
 
 ---
 
-## 📂 Datasets Used
-- `covid_19_india.csv` – Daily state-level COVID-19 case data  
-- `covid_vaccine_statewise.csv` – Vaccination progress by state and age group  
-- `StatewiseTestingDetails.csv` – State-level COVID-19 testing data  
-
-All datasets were kept **raw and unaltered** during ingestion to preserve data integrity.
-
----
-
-## 🧪 Part 1: ETL & Feature Engineering (SQL)
-The ETL pipeline was implemented using SQL in a **PostgreSQL / Google Colab** environment.
-
-### Key ETL Steps
-- Standardized dates and normalized state names
-- Integrated case, testing, and vaccination datasets
-- Engineered analytical metrics:
-  - Daily new cases using `LAG()`
-  - Case Fatality Rate (CFR)
+## 🔄 What I Did
+- Built a **SQL ETL pipeline** to integrate case, testing & vaccination datasets
+- Engineered key metrics:
+  - Daily new cases (LAG)
   - Test positivity rate
-  - Vaccination rate
-  - Active cases
+  - Case Fatality Rate (CFR)
+  - Vaccination & recovery rates
   - Risk classification (High / Medium / Low)
-- Created a consolidated `covid_summary` table
-- Exported final dataset to Excel for analysis
-
-🔗 **SQL Notebook**  
-https://colab.research.google.com/drive/10dnmxWzPtzsyP3MnQobY_ZxTNbWrFpVl
+- Created a **clean analytical dataset (`covid_summary`)**
+- Performed **state-wise, time-series & correlation analysis**
+- Designed an **interactive Excel dashboard** with slicers & forecasts
 
 ---
 
-## 📊 Part 2: Excel Data Analysis
-The cleaned dataset was analyzed in Excel to extract trends and insights.
-
-### Key Analyses Performed
-- State-wise and national case trends
-- Daily and monthly COVID-19 case progression
-- Testing volume vs positivity rate analysis
-- Vaccination coverage and age-group analysis
-- Recovery rate vs vaccination rate comparison
-- Risk assessment using CFR and active cases
-- Hotspot detection using conditional formatting
-- Time-series forecasting using **FORECAST.ETS**
-
-All missing or zero values were handled **contextually**, not imputed, to avoid analytical distortion.
+## 📊 Key Insights
+- COVID-19 impact varied significantly by state
+- Higher testing → higher detected cases
+- Vaccination reduced severity and risk over time
+- Recovery rates remained consistently high nationwide
+- Anomalies were **episodic, not systemic**
+- Forecasting highlights rising uncertainty over time
 
 ---
 
-## 📈 Part 3: Interactive Excel Dashboard
-An interactive dashboard was built to present insights in a single view.
+## 📈 Deliverables
+- SQL-generated analytical dataset  
+- Interactive Excel dashboard  
+- Time-series forecasting & risk analysis  
 
-### Dashboard Features
-- KPI summary (cases, recoveries, deaths, tests, vaccinations)
-- State-wise comparisons
-- Trend analysis over time
-- Risk classification (High / Medium / Low)
-- Forecasted case trends
-- Slicers for state and date filtering
-
-📸 Dashboard screenshots are available in the `/screenshots` folder.
+📸 Dashboard screenshots → `/screenshots`
 
 ---
 
-## 🔍 Key Insights
-- COVID-19 impact varied significantly across Indian states
-- Higher testing volumes correlated with higher detected cases
-- Vaccination rollout contributed to reduced severity and risk levels
-- Recovery rates remained consistently high across states
-- Operational anomalies were episodic rather than systemic
-- Forecasting highlights increasing uncertainty over time
+## 🔗 Links
+- **SQL Notebook:**  
+  https://colab.research.google.com/drive/10dnmxWzPtzsyP3MnQobY_ZxTNbWrFpVl
 
 ---
 
-## 🧠 Learnings
-- Importance of **ETL and data modeling before visualization**
-- Handling real-world dirty data without over-cleaning
-- Using Excel as a serious analytical tool beyond basic reporting
-- Communicating uncertainty clearly in forecasts
-- Translating analysis into business and policy insights
-
----
-
-## 📁 Repository Structure
+## 👤 Author
+**Shashank Kumar**  
+Aspiring Data Analyst | SQL • Excel • Analytics
